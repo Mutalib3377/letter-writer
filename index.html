@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UK Visa Letter Writer — Learn Ready</title>
+  <meta name="description" content="Generate a professional UK visa cover letter, sponsorship letter, or personal statement in seconds. Powered by AI, built by Learn Ready." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════ HEADER ═══════════════════ -->
+<header>
+  <div class="logo">Learn<span class="logo-dot">Ready</span><span class="logo-badge">AI Tools</span></div>
+  <button class="header-cta" id="bookBtn">Book a Consultation</button>
+</header>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero" aria-label="Hero banner">
+  <div class="hero-inner">
+    <div class="hero-tag">✦ AI-Powered — Professional Letters in Minutes</div>
+    <h1>UK Visa Letter Writer<br /><span>Write Like a Pro</span></h1>
+    <p>Get a professionally written visa cover letter, sponsorship letter, or personal statement — tailored to your exact situation and ready to submit.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>4</strong><span>Letter types</span></div>
+      <div class="hero-stat"><strong>60 sec</strong><span>To generate</span></div>
+      <div class="hero-stat"><strong>100%</strong><span>Personalised</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ MAIN ═══════════════════ -->
+<main class="main-wrap">
+
+  <!-- ── FORM SECTION ── -->
+  <div id="formSection">
+
+    <!-- STEP 1: LETTER TYPE -->
+    <div class="card" id="step1Card">
+      <span class="step-label">Step 1</span>
+      <h2 class="card-title">What type of letter do you need? ✉️</h2>
+      <p class="card-sub">Select the letter that matches your application need.</p>
+      <div class="type-grid" id="typeGrid" role="group" aria-label="Letter type selection">
+        <button class="type-card" data-value="Visa Cover Letter" onclick="selectType(this)" aria-pressed="false">
+          <div class="type-icon" aria-hidden="true">✉️</div>
+          <div class="type-name">Visa Cover Letter</div>
+          <div class="type-desc">Addressed to UKVI explaining your purpose and strong ties to your home country</div>
+        </button>
+        <button class="type-card" data-value="Sponsorship Letter" onclick="selectType(this)" aria-pressed="false">
+          <div class="type-icon" aria-hidden="true">🤝</div>
+          <div class="type-name">Sponsorship Letter</div>
+          <div class="type-desc">Written by your UK-based sponsor confirming financial support and relationship</div>
+        </button>
+        <button class="type-card" data-value="Personal Statement" onclick="selectType(this)" aria-pressed="false">
+          <div class="type-icon" aria-hidden="true">📖</div>
+          <div class="type-name">Personal Statement</div>
+          <div class="type-desc">Detailed narrative for Student or Skilled Worker visa — your story and goals</div>
+        </button>
+        <button class="type-card" data-value="Travel Itinerary Letter" onclick="selectType(this)" aria-pressed="false">
+          <div class="type-icon" aria-hidden="true">✈️</div>
+          <div class="type-name">Travel Itinerary Letter</div>
+          <div class="type-desc">Outlining your planned activities, accommodation, and stay in the UK</div>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 2: APPLICANT DETAILS -->
+    <div class="card" id="step2Card">
+      <span class="step-label">Step 2</span>
+      <h2 class="card-title">Your Details 👤</h2>
+      <p class="card-sub">These go directly into the letter — be as accurate as possible.</p>
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-lbl" for="fullName">Full Name <span class="req" aria-label="required">*</span></label>
+          <input type="text" class="form-input" id="fullName" placeholder="e.g. Chukwuemeka Okafor" autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label class="form-lbl" for="nationality">Nationality <span class="req" aria-label="required">*</span></label>
+          <select class="form-select" id="nationality">
+            <option value="">Select country...</option>
+            <option>Nigerian</option>
+            <option>Ghanaian</option>
+            <option>Kenyan</option>
+            <option>South African</option>
+            <option>Zimbabwean</option>
+            <option>Indian</option>
+            <option>Pakistani</option>
+            <option>Bangladeshi</option>
+            <option>Filipino</option>
+            <option>American</option>
+            <option>Chinese</option>
+            <option>Brazilian</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-lbl" for="location">Current City &amp; Country</label>
+          <input type="text" class="form-input" id="location" placeholder="e.g. Lagos, Nigeria" />
+        </div>
+        <div class="form-group">
+          <label class="form-lbl" for="occupation">Occupation / Job Title</label>
+          <input type="text" class="form-input" id="occupation" placeholder="e.g. Software Engineer / Student" />
+        </div>
+        <div class="form-group">
+          <label class="form-lbl" for="employer">Employer or School Name</label>
+          <input type="text" class="form-input" id="employer" placeholder="e.g. MTN Nigeria / Lagos State University" />
+        </div>
+        <div class="form-group">
+          <label class="form-lbl" for="income">Approximate Monthly Income</label>
+          <select class="form-select" id="income">
+            <option value="">Select range...</option>
+            <option>Under £500</option>
+            <option>£500 – £1,500</option>
+            <option>£1,500 – £3,000</option>
+            <option>£3,000 – £5,000</option>
+            <option>£5,000+</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3: VISA & TRAVEL -->
+    <div class="card" id="step3Card">
+      <span class="step-label">Step 3</span>
+      <h2 class="card-title">Visa &amp; Travel Information ✈️</h2>
+      <p class="card-sub">This helps the AI write the most accurate letter for your visa type.</p>
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-lbl" for="visaType">Visa Type Applying For <span class="req" aria-label="required">*</span></label>
+          <select class="form-select" id="visaType">
+            <option value="">Select visa type...</option>
+            <option>Student Visa (Tier 4)</option>
+            <option>Skilled Worker Visa</option>
+            <option>Standard Visitor Visa</option>
+            <option>Family Visa</option>
+            <option>Business Visitor Visa</option>
+            <option>Medical Treatment Visa</option>
+            <option>Graduate Visa</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-lbl" for="duration">Duration of Stay</label>
+          <select class="form-select" id="duration">
+            <option value="">Select duration...</option>
+            <option>Less than 1 month</option>
+            <option>1 – 6 months</option>
+            <option>6 months – 1 year</option>
+            <option>1 – 3 years</option>
+            <option>3 – 5 years</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label class="form-lbl" for="purpose">Purpose of Visit</label>
+          <input type="text" class="form-input" id="purpose" placeholder="e.g. Attend MSc Data Science programme at University of Manchester" />
+        </div>
+        <div class="form-group">
+          <label class="form-lbl" for="travelDates">Intended Travel Dates</label>
+          <input type="text" class="form-input" id="travelDates" placeholder="e.g. September 2025 – September 2026" />
+        </div>
+        <div class="form-group">
+          <label class="form-lbl" for="accommodation">Accommodation in UK</label>
+          <input type="text" class="form-input" id="accommodation" placeholder="e.g. University halls of residence" />
+        </div>
+        <div class="form-group full">
+          <label class="form-lbl" for="ukContact">UK Contact Person (if any)</label>
+          <input type="text" class="form-input" id="ukContact" placeholder="e.g. Mrs Amaka Obi, sister, 14 Maple Road, London" />
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 4: PERSONAL SITUATION -->
+    <div class="card" id="step4Card">
+      <span class="step-label">Step 4</span>
+      <h2 class="card-title">Your Personal Situation 📋</h2>
+      <p class="card-sub">The more detail you give here, the stronger and more convincing your letter will be.</p>
+      <div class="form-grid">
+        <div class="form-group full">
+          <label class="form-lbl" for="ties">Ties to Your Home Country <span class="req" aria-label="required">*</span></label>
+          <textarea class="form-textarea" id="ties" placeholder="e.g. I own a registered business in Lagos employing 4 staff. I have a wife and 2 young children who will remain in Nigeria. I own property in Abuja and have family responsibilities."></textarea>
+        </div>
+        <div class="form-group full">
+          <label class="form-lbl" for="sponsor">Sponsor Details (if applicable)</label>
+          <textarea class="form-textarea" id="sponsor" placeholder="e.g. Mr James Obi, my elder brother, UK citizen, residing at 22 Baker Street, London. He will cover my accommodation and has agreed to support me with £2,000 for travel expenses."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-lbl">Previous UK Visits</label>
+          <div class="radio-row" role="radiogroup" aria-label="Previous UK visits">
+            <div class="radio-pill">
+              <input type="radio" name="prevVisit" id="pv1" value="I have never visited the UK before" />
+              <label for="pv1">Never visited</label>
+            </div>
+            <div class="radio-pill">
+              <input type="radio" name="prevVisit" id="pv2" value="I have previously visited the UK with a valid visa" />
+              <label for="pv2">Visited before</label>
+            </div>
+            <div class="radio-pill">
+              <input type="radio" name="prevVisit" id="pv3" value="I am currently in the UK" />
+              <label for="pv3">Currently in UK</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-lbl">Previous Visa Refusals</label>
+          <div class="radio-row" role="radiogroup" aria-label="Previous visa refusals">
+            <div class="radio-pill">
+              <input type="radio" name="refusal" id="rf1" value="I have never been refused a UK visa" />
+              <label for="rf1">Never refused</label>
+            </div>
+            <div class="radio-pill">
+              <input type="radio" name="refusal" id="rf2" value="I was refused a UK visa once previously" />
+              <label for="rf2">Refused once</label>
+            </div>
+            <div class="radio-pill">
+              <input type="radio" name="refusal" id="rf3" value="I have been refused a UK visa more than once" />
+              <label for="rf3">Refused multiple times</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group full">
+          <label class="form-lbl" for="additional">Additional Context</label>
+          <textarea class="form-textarea" id="additional" placeholder="Any other details that should be included — awards, special circumstances, health conditions, previous UK study etc."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 5: GENERATE -->
+    <div class="card" id="step5Card">
+      <span class="step-label">Step 5</span>
+      <h2 class="card-title">Generate Your Letter 🚀</h2>
+      <p class="card-sub">All fields marked <span class="req">*</span> are required. Your data is processed securely and never stored.</p>
+      <button class="generate-btn" id="generateBtn" onclick="generateLetter()" disabled>
+        ✨ Generate My Professional Letter
+      </button>
+    </div>
+
+  </div><!-- /formSection -->
+
+  <!-- ── LOADING ── -->
+  <div id="loadingWrap" aria-live="polite" aria-label="Generating letter" hidden>
+    <div class="loading-card">
+      <div class="loading-ring" aria-hidden="true"></div>
+      <p class="loading-title">Writing Your Letter...</p>
+      <p class="loading-sub">AI is crafting a personalised professional letter for your application</p>
+      <div class="loading-steps">
+        <div class="lstep" id="ls1">✍️ Analysing your situation...</div>
+        <div class="lstep" id="ls2">📋 Applying UK immigration guidelines...</div>
+        <div class="lstep" id="ls3">🎯 Personalising for your visa type...</div>
+        <div class="lstep" id="ls4">✅ Finalising your professional letter...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RESULT ── -->
+  <div id="resultArea" hidden>
+
+    <!-- Result Header -->
+    <div class="result-header fade-up">
+      <div class="result-badges">
+        <span class="rbadge rbadge-blue" id="rBadgeType">✉️ Visa Cover Letter</span>
+        <span class="rbadge rbadge-pink" id="rBadgeVisa">🇬🇧 UK Visa</span>
+        <span class="rbadge rbadge-orange" id="rBadgeWords">📝 ~ words</span>
+      </div>
+      <div class="result-name" id="rName">Your Name</div>
+      <div class="result-sub">Your letter is ready — review, personalise any placeholders, then submit</div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-row fade-up">
+      <button class="action-btn action-btn-blue" onclick="copyLetter()" id="copyBtn">📋 Copy Letter</button>
+      <button class="action-btn action-btn-outline" onclick="window.print()">🖨️ Print</button>
+      <button class="action-btn action-btn-orange" onclick="downloadLetter()" id="downloadBtn">📥 Download .txt</button>
+      <button class="action-btn action-btn-dark" onclick="regenerateLetter()" id="regenBtn">✨ Regenerate</button>
+    </div>
+    <div class="copied-msg" id="copiedMsg" role="status">✓ Letter copied to clipboard!</div>
+
+    <!-- Letter Output -->
+    <div class="letter-card fade-up">
+      <div class="ai-label"><div class="ai-dot" aria-hidden="true"></div> AI Generated Letter — Learn Ready</div>
+      <div id="letterOutput" aria-label="Generated letter content"></div>
+    </div>
+
+    <!-- Warning -->
+    <div class="warning-box fade-up" role="alert">
+      <span style="font-size:1.3rem;flex-shrink:0;" aria-hidden="true">⚠️</span>
+      <p><strong>Review Before Submitting:</strong> Check all bracketed placeholders <strong>[LIKE THIS]</strong> and replace with your real information before submitting to UKVI. This letter is AI-generated guidance — always verify requirements at <a href="https://www.gov.uk/browse/visas-immigration" target="_blank" rel="noopener">gov.uk</a>.</p>
+    </div>
+
+    <!-- Tips -->
+    <div class="tips-box fade-up" id="tipsBox">
+      <div class="tips-title">💡 Learn Ready Tips</div>
+      <div class="tips-list" id="tipsList"></div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box fade-up">
+      <h3>Want a Human Expert to Review Your Letter?</h3>
+      <p>Our certified UK immigration advisors proofread and strengthen your letter before you submit — maximising your chances of approval.</p>
+      <div class="cta-btns">
+        <button class="cta-btn-white" id="reviewBtn">📝 Get Letter Reviewed</button>
+        <button class="cta-btn-outline" id="advisorBtn">💬 Speak to an Advisor</button>
+      </div>
+    </div>
+
+    <button class="restart-btn" onclick="restartTool()">↩ Write Another Letter</button>
+
+  </div><!-- /resultArea -->
+
+</main>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer>
+  <p>© 2026 <strong>Learn Ready</strong> — UK Immigration Guidance Platform</p>
+  <p>Letters are AI-generated guidance only and do not constitute legal advice. Always verify at <a href="https://www.gov.uk/browse/visas-immigration" target="_blank" rel="noopener">gov.uk</a>.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

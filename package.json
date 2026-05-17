@@ -1,0 +1,13 @@
+{
+  "name": "uk-visa-letter-writer",
+  "version": "1.0.0",
+  "description": "AI-powered UK Visa Letter Writer by Learn Ready",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "devDependencies": {
+    "vercel": "^37.0.0"
+  }
+}
